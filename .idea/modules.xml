@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://F:\git_space\as_lib\_LibViewFresco\LibViewFresco\FrescoLib.iml" filepath="F:\git_space\as_lib\_LibViewFresco\LibViewFresco\FrescoLib.iml" />
+      <module fileurl="file://F:\git_space\as_lib\_LibViewFresco\LibViewFrescoSample\FrescoSample.iml" filepath="F:\git_space\as_lib\_LibViewFresco\LibViewFrescoSample\FrescoSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LibViewFresco/LibViewFresco.iml" filepath="$PROJECT_DIR$/LibViewFresco/LibViewFresco.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LibViewFrescoSample/LibViewFrescoSample.iml" filepath="$PROJECT_DIR$/LibViewFrescoSample/LibViewFrescoSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_LibViewFresco.iml" filepath="$PROJECT_DIR$/_LibViewFresco.iml" />
+    </modules>
+  </component>
+</project>
