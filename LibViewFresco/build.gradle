@@ -1,0 +1,78 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false // Lint 会检查项目中的语法错误
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    // compile 'com.android.support:appcompat-v7:26.+'
+
+    compile 'com.facebook.fresco:fresco:1.5.0'
+    // 主依赖
+    compile 'com.facebook.fresco:animated-gif:1.5.0'
+    // 支持gif动图
+    compile 'com.facebook.fresco:animated-webp:1.5.0'
+    // 支持webp动态
+    compile 'com.facebook.fresco:webpsupport:1.5.0'
+    // 支持webp静态
+    compile 'com.facebook.fresco:imagepipeline-okhttp3:1.5.0'
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+}
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'libviewfresco'
+
+    publishedGroupId = 'com.yline.lib'
+    libraryName = 'LibViewFresco'
+    artifact = 'LibViewFresco'
+
+    libraryDescription = '提供使用较多的公共View类'
+
+    siteUrl = 'https://github.com/yline/as_lib_view_fresco'
+    gitUrl = 'https://github.com/yline/as_lib_view_fresco.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'yline'
+    developerName = 'yline'
+    developerEmail = 'yline95739173@outlook.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+
+javadoc {
+    options {
+        encoding "UTF-8"
+        charSet 'UTF-8'
+        //author true
+        version true
+        title 'A LibSDK Support For Android'   // 文档标题
+    }
+}
