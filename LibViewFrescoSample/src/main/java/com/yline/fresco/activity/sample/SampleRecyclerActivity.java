@@ -16,7 +16,7 @@ import com.yline.view.fresco.common.FrescoCallback;
 import com.yline.fresco.sample.R;
 import com.yline.view.fresco.view.FrescoView;
 import com.yline.test.UrlConstant;
-import com.yline.view.recycler.adapter.CommonRecyclerAdapter;
+import com.yline.view.recycler.adapter.AbstractCommonRecyclerAdapter;
 import com.yline.view.recycler.holder.RecyclerViewHolder;
 
 import java.util.ArrayList;
@@ -51,10 +51,10 @@ public class SampleRecyclerActivity extends BaseAppCompatActivity {
         for (int i = 0; i < 400; i++) {
             resultList.add(UrlConstant.getGif());
         }
-        mRecyclerAdapter.setDataList(resultList);
+        mRecyclerAdapter.setDataList(resultList, true);
     }
 
-    private class RecyclerAdapter extends CommonRecyclerAdapter<String> {
+    private class RecyclerAdapter extends AbstractCommonRecyclerAdapter<String> {
 
         @Override
         public int getItemRes() {
@@ -66,7 +66,7 @@ public class SampleRecyclerActivity extends BaseAppCompatActivity {
             FrescoView frescoView = holder.get(R.id.fresco_view_recycler);
             // FrescoManager.setImageUri(frescoView, sList.get(position));
 
-            FrescoManager.setImageUri(frescoView, sList.get(position), false, new FrescoCallback.OnSimpleLoadCallback() {
+            FrescoManager.setImageUri(frescoView, getItem(position), false, new FrescoCallback.OnSimpleLoadCallback() {
                 @Override
                 public void onStart(String id, Object callerContext) {
 

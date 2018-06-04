@@ -11,7 +11,7 @@ import com.yline.base.BaseActivity;
 import com.yline.fresco.sample.R;
 import com.yline.view.fresco.view.FrescoView;
 import com.yline.test.UrlConstant;
-import com.yline.view.recycler.adapter.CommonRecyclerAdapter;
+import com.yline.view.recycler.adapter.AbstractCommonRecyclerAdapter;
 import com.yline.view.recycler.holder.RecyclerViewHolder;
 
 import java.util.ArrayList;
@@ -51,10 +51,10 @@ public class LibOOMActivity extends BaseActivity {
         for (int i = 0; i < 9_000; i++) {
             urlList.add(UrlConstant.getUrl());
         }
-        recyclerApdater.setDataList(urlList);
+        recyclerApdater.setDataList(urlList, true);
     }
 
-    private class OOMRecyclerApdater extends CommonRecyclerAdapter<String> {
+    private class OOMRecyclerApdater extends AbstractCommonRecyclerAdapter<String> {
         @Override
         public int getItemRes() {
             return R.layout.item_recycler;

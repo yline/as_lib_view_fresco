@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.0"
+    buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "com.yline.fresco.sample"
         minSdkVersion 14
@@ -25,10 +25,17 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile project(':LibViewFresco')
-    compile 'com.android.support:appcompat-v7:26.+'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.yline.lib:LibSDK:2.1.0'
-    compile 'com.yline.lib:LibViewRecycler:1.0.3'
-    compile 'com.android.support:design:26.+'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.1.0'
+    compile 'com.yline.lib:LibSDK:2.1.2'
+    compile 'com.yline.lib:LibViewRecycler:1.1.1'
+    compile 'com.android.support:design:26.1.0'
     testCompile 'junit:junit:4.12'
+
+    compile 'com.facebook.fresco:fresco:1.5.0' // 主依赖
+    compile 'com.facebook.fresco:animated-gif:1.5.0' // 支持gif动图
+    compile 'com.facebook.fresco:animated-webp:1.5.0' // 支持webp动态
+    compile 'com.facebook.fresco:webpsupport:1.5.0' // 支持webp静态
+    compile 'com.facebook.fresco:imagepipeline-okhttp3:1.5.0'
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
 }

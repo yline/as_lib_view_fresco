@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.0"
+    buildToolsVersion "26.0.2"
 
     defaultConfig {
         minSdkVersion 14
@@ -25,19 +25,18 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    // compile 'com.android.support:appcompat-v7:26.+'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
 
-    compile 'com.facebook.fresco:fresco:1.5.0'
+    implementation 'com.facebook.fresco:fresco:1.5.0'
     // 主依赖
-    compile 'com.facebook.fresco:animated-gif:1.5.0'
+    implementation 'com.facebook.fresco:animated-gif:1.5.0'
     // 支持gif动图
-    compile 'com.facebook.fresco:animated-webp:1.5.0'
+    implementation 'com.facebook.fresco:animated-webp:1.5.0'
     // 支持webp动态
-    compile 'com.facebook.fresco:webpsupport:1.5.0'
+    implementation 'com.facebook.fresco:webpsupport:1.5.0'
     // 支持webp静态
-    compile 'com.facebook.fresco:imagepipeline-okhttp3:1.5.0'
-    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    implementation 'com.facebook.fresco:imagepipeline-okhttp3:1.5.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.9.0'
 }
 
 ext {
@@ -53,7 +52,7 @@ ext {
     siteUrl = 'https://github.com/yline/as_lib_view_fresco'
     gitUrl = 'https://github.com/yline/as_lib_view_fresco.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.1.0'
 
     developerId = 'yline'
     developerName = 'yline'
